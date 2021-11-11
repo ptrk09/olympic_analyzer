@@ -1,0 +1,102 @@
+{
+    "metadata" : {
+        "name" : "medal",
+        "base_url": "http://localhost:5000/cube/medal"
+    },
+    "dimensions": [
+        {
+            "name" : "athletes",
+            "fields" : [
+                {
+                    "name" : "athletes.name",
+                    "hierarchy" : "h_name",
+                    "level" : "name"
+                },
+                {
+                    "name" : "athletes.sex",
+                    "hierarchy" : "h_sex",
+                    "level" : "sex"
+                },
+                {
+                    "name" : "athletes.age",
+                    "hierarchy" : "h_age",
+                    "level" : "age"
+                },
+                {
+                    "name" : "athletes.height",
+                    "hierarchy" : "h_height",
+                    "level" : "height"
+                },
+                {
+                    "name" : "athletes.weight",
+                    "hierarchy" : "h_weight",
+                    "level" : "weight"
+                },
+                {
+                    "name" : "athletes.nation_noc",
+                    "hierarchy" : "h_noc",
+                    "level" : "nation_noc"
+                }
+            ],
+            "base_drilldown" : "h_name",
+            "levels" : ["name", "sex", "age", "height", "weight", "nation_noc"]
+        },
+        {
+            "name" : "games",
+            "fields" : [
+                {
+                    "name" : "games.year",
+                    "hierarchy" : "h_year",
+                    "level" : "year"
+                },
+                {
+                    "name" : "games.season",
+                    "hierarchy" : "h_season",
+                    "level" : "season"
+                }
+            ],
+            "base_drilldown" : "h_year",
+            "levels" : ["year", "season"]
+        },
+        {
+            "name" : "sport",
+            "fields" : [
+                {
+                    "name" : "sport.name_sport",
+                    "hierarchy" : "h_sport",
+                    "level" : "name_sport"
+                },
+                {
+                    "name" : "sport.id",
+                    "hierarchy" : "h_sport_id",
+                    "level" : "id"
+                }
+                
+            ],
+            "base_drilldown" : "h_sport",
+            "levels":["name_sport", "id"]
+        },
+        {
+            "name" : "event",
+            "fields" : [
+                {
+                    "name" : "event.name_event",
+                    "hierarchy" : "h_event",
+                    "level" : "name_event"
+                },
+                {
+                    "name" : "event.id",
+                    "hierarchy" : "h_event_id",
+                    "level" : "id"
+                }
+            ],
+            "base_drilldown" : "h_event",
+            "levels":["name_event", "id"]
+        }
+    ],
+    "aggregates" : [
+        "count_gold_medals",
+        "count_silver_medals",
+        "count_bronze_medals"
+    ]
+}

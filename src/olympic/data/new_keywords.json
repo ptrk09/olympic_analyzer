@@ -1,0 +1,111 @@
+{
+    "is_crete_key_value" : true,
+    "data_keys" : 
+    [
+        {
+            "old_name":"keyword_name",
+            "new_name":"athletes.name",
+            "group": "athletes"
+        },
+        {
+            "old_name":"keyword_noc",
+            "new_name":"athletes.nation_noc",
+            "group": "athletes"
+        },
+        {
+            "old_name":"keyword_age",
+            "new_name":"athletes.age",
+            "group": "athletes"
+        },
+        {
+            "old_name":"keyword_height",
+            "new_name":"athletes.height",
+            "group": "athletes"
+        },
+        {
+            "old_name":"keyword_weight",
+            "new_name":"athletes.weight",
+            "group": "athletes"
+        },
+        {
+            "old_name":"keyword_sex",
+            "new_name":"athletes.sex",
+            "group": "athletes"
+        },
+        {
+            "old_name":"keyword_year_game",
+            "new_name":"games.year",
+            "group": "games"
+        },
+        {
+            "old_name":"keyword_sport",
+            "new_name":"sport.name_sport",
+            "group": "sport"
+        },
+        {
+            "old_name":"keyword_event",
+            "new_name":"event.name_event",
+            "group": "event"
+        },
+        {
+            "old_name":"check_output_name",
+            "new_name":"athletes.name",
+            "group": "out"
+        },
+        {
+            "old_name":"check_output_sex",
+            "new_name":"athletes.sex",
+            "group": "out"
+        },
+        {
+            "old_name":"check_output_age",
+            "new_name":"athletes.age",
+            "group": "out"
+        },
+        {
+            "old_name":"check_output_height",
+            "new_name":"athletes.height",
+            "group": "out"
+        },
+        {
+            "old_name":"check_output_weight",
+            "new_name":"athletes.weight",
+            "group": "out"
+        },
+        {
+            "old_name":"check_output_noc",
+            "new_name":"athletes.nation_noc",
+            "group": "out"
+        },
+        {
+            "old_name":"check_output_game",
+            "new_name":"games.year",
+            "group": "out"
+        },
+        {
+            "old_name":"check_output_sport",
+            "new_name":"sport.name_sport",
+            "group": "out"
+        },
+        {
+            "old_name":"check_output_event",
+            "new_name":"event.name_event",
+            "group": "out"
+        },
+        {
+            "old_name":"check_output_medals_gold",
+            "new_name":"count_gold_medals",
+            "group": "out"
+        },
+        {
+            "old_name":"check_output_medals_silver",
+            "new_name":"count_silver_medals",
+            "group": "out"
+        },
+        {
+            "old_name":"check_output_medals_bronze",
+            "new_name":"count_bronze_medals",
+            "group": "out"
+        }
+    ]
+}

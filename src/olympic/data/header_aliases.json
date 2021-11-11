@@ -1,0 +1,14 @@
+{
+    "athletes.name" : "Имя спортсмена",
+    "athletes.nation_noc" : "Страна спортсмена",
+    "athletes.age" : "Возраст спортсмена",
+    "athletes.height" : "Рост спортсмена",
+    "athletes.weight" : "Вес спортсмена",
+    "athletes.sex" : "Пол спортсмена",
+    "games.year" : "Год проведения олимпиады",
+    "sport.name_sport" : "Вид спорта",
+    "event.name_event" : "Дисциплина вида спорта",
+    "count_gold_medals" : "Количество золотых медалей",
+    "count_silver_medals" : "Количество серебренных медалей",
+    "count_bronze_medals" : "Количество бронзовых медалей"
+}

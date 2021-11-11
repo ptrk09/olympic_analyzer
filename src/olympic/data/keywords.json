@@ -1,0 +1,58 @@
+{
+    "types_str": {
+        "data": [
+            "keyword_name",
+            "keyword_noc",
+            "keyword_sport",
+            "keyword_event"
+        ]
+    },
+
+    "types_int": {
+        "data": [
+            "keyword_age",
+            "keyword_height",
+            "keyword_year_game"
+        ]
+    },
+
+    "types_float": {
+        "data": [
+            "keyword_weight"
+        ]
+    },
+
+    "types_bool": {
+        "data": [
+            "keyword_sex_m",
+            "keyword_sex_f",
+            "keyword_group_medals"
+        ]
+    },
+
+    "types_switch": {
+        "data": [
+            "keyword_gold",
+            "keyword_silver",
+            "keyword_bronze"
+        ]
+    },
+
+    "output_keywords": {
+        "data": [
+            "check_output_name",
+            "check_output_sex",
+            "check_output_age",
+            "check_output_height",
+            "check_output_weight",
+            "check_output_noc",
+            "check_output_game",
+            "check_output_sport",
+            "check_output_event",
+            "check_output_medals",
+            "check_output_medals_gold",
+            "check_output_medals_silver",
+            "check_output_medals_bronze"
+        ]
+    }
+}

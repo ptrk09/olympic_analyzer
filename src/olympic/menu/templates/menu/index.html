@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body>
+    
+<div>
+
+    
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/menu/find">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/accounts/comment">Комментарии</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="/accounts/acc">{{ user.username }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/menu/logout">Выход</a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="/accounts/login">Вход</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/accounts/register">Регистрация</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="container">
+        {% if user.is_authenticated %}
+        <form action="/math/test/" method="post">
+        {% csrf_token %}
+
+        <div class="row">
+
+            <div class="col-xl-9 mt-3">
+
+                <label for="basic-url" class="form-label mb-3">Info Athletes, Events and Nations</label>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Имя и фамилия</span>
+                    <input type="text" name="keyword_name" class="form-control" placeholder="Введите имя" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                
+                <div class="row">
+
+                    <div class="col mb-3">
+                        <label for="basic-url" class="form-label mb-3">Пол спортсмена: </label>
+                    </div>
+
+                    <div class="col mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" name="keyword_sex_m" type="checkbox" value="True" id="flexCheckDefault" checked>
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Мужской
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" name="keyword_sex_f" type="checkbox" value="True" id="flexCheckDefault" checked>
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Женский
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Возраст</span>
+                    <input type="text" name="keyword_age" class="form-control" placeholder="Введите возраст" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Рост спортсмена</span>
+                    <input type="text" name="keyword_height" class="form-control" placeholder="Введите рост" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Вес спортсмена</span>
+                    <input type="text" name="keyword_weight" class="form-control" placeholder="Введите вес" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Национальность спортсмена</span>
+                    <input type="text" name="keyword_noc" class="form-control" placeholder="Введите национальность" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Год проведения олимпийских игр</span>
+                    <input type="text" name="keyword_year_game" class="form-control" placeholder="Введите год проведения олимпийских игр" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Вид спорта</span>
+                    <input type="text" name="keyword_sport" class="form-control" placeholder="Введите вид спорта" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Дисциплина в виде спорта</span>
+                    <input type="text" name="keyword_event" class="form-control" placeholder="Введите дисциплину в виде спорта" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                </div>
+
+            </div>
+
+            <div class="col mt-3">
+                <label for="basic-url" class="form-label mt-3">Выводимые агригации:</label>
+
+                <div class="form-check form-switch">
+                    <input class="form-check-input" name="check_output_name" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Имя</label>
+                </div>
+                <div class="form-check form-switch mt-2">
+                    <input class="form-check-input" name="check_output_sex" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Пол спортсмена</label>
+                </div>
+                <div class="form-check form-switch mt-2">
+                    <input class="form-check-input" name="check_output_age" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Возраст спортсмена</label>
+                </div>
+                <div class="form-check form-switch mt-2">
+                    <input class="form-check-input" name="check_output_height" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Рост спортсмена</label>
+                </div>
+                <div class="form-check form-switch mt-2">
+                    <input class="form-check-input" name="check_output_weight" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Вес спортсмена</label>
+                </div>
+                <div class="form-check form-switch mt-2">
+                    <input class="form-check-input" name="check_output_noc" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Страна спортсмена</label>
+                </div>
+                <div class="form-check form-switch mt-2">
+                    <input class="form-check-input" name="check_output_game" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Год проведения олимпийских игр</label>
+                </div>
+                <div class="form-check form-switch mt-2">
+                    <input class="form-check-input" name="check_output_sport" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Вид спорта</label>
+                </div>
+                <div class="form-check form-switch mt-2">
+                    <input class="form-check-input" name="check_output_event" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Дисциплина в виде спорта</label>
+                </div>
+                <div class="form-check form-switch mt-2">
+                    <input class="form-check-input" name="check_output_medals_gold" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Количество золотых медалей</label>
+                </div>
+                <div class="form-check form-switch mt-2">
+                    <input class="form-check-input" name="check_output_medals_silver" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Количество серебренных медалей</label>
+                </div>
+                <div class="form-check form-switch mt-2">
+                    <input class="form-check-input" name="check_output_medals_bronze" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Количество бронзовых медалей</label>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <button type="submit" class="btn btn-outline-success">Найти</button>
+        
+        </form>
+        {% else %}
+        <div class="alert alert-warning mt-lg-4" role="alert">
+            Вы не можете пользоваться сервисом без авторизации в системе! <a class="text-primary" href="/accounts/login">Войти</a>
+        </div>
+        {% endif %}
+</div>
+    <!-- <div class="container mt-4">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+            </tr>
+            </tbody>
+        </table>
+    </div> -->
+
+</body>
+</html>
