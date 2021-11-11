@@ -1,0 +1,117 @@
+\begin{thebibliography}{10}
+\def\selectlanguageifdefined#1{
+\expandafter\ifx\csname date#1\endcsname\relax
+\else\language\csname l@#1\endcsname\fi}
+\ifx\undefined\url\def\url#1{{\small #1}}\else\fi
+\ifx\undefined\BibUrl\def\BibUrl#1{\url{#1}}\else\fi
+\ifx\undefined\BibAnnote\long\def\BibAnnote#1{(#1)}\else\fi
+\ifx\undefined\BibEmph\def\BibEmph#1{\emph{#1}}\else\fi
+
+\bibitem{olympic-inf}
+\selectlanguageifdefined{russian}
+Olypic games [Электронный ресурс].
+\newblock Режим доступа: \url{https://olympics.com/ru/} (дата
+  обращения: 01.06.2021).
+
+\bibitem{role-m}
+\selectlanguageifdefined{russian}
+Implementing Role Based Security in a Web App [Электронный
+  ресурс].
+\newblock Режим доступа:
+  \url{https://medium.com/bluecore-engineering/implementing-role-based-security-in-a-web-app-89b66d1410e4}
+  (дата обращения: 01.06.2021).
+
+\bibitem{database}
+\selectlanguageifdefined{russian}
+Что такое база данных | Oracle Россия и СНГ
+  [Электронный ресурс].
+\newblock Режим доступа:
+  \url{https://www.oracle.com/ru/database/what-is-database/} (дата
+  обращения: 07.06.2021).
+
+\bibitem{subd}
+\selectlanguageifdefined{russian}
+Что такое СУБД - RU-CENTER [Электронный ресурс].
+\newblock Режим доступа:
+  \url{https://www.nic.ru/help/chto-takoe-subd_8580.html} (дата
+  обращения: 07.06.2021).
+
+\bibitem{agr-f}
+\selectlanguageifdefined{russian}
+Агрегатные функции (Transact-SQL) [Электронный
+  ресурс].
+\newblock Режим доступа:
+  \url{https://docs.microsoft.com/ru-ru/sql/t-sql/functions/aggregate-functions-transact-sql?view=sql-server-ver15}
+  (дата обращения: 07.06.2021).
+
+\bibitem{olap}
+\selectlanguageifdefined{russian}
+What is OLAP? | IBM [Электронный ресурс].
+\newblock Режим доступа: \url{https://www.ibm.com/cloud/learn/olap}
+  (дата обращения: 07.06.2021).
+
+\bibitem{olap-cube}
+\selectlanguageifdefined{russian}
+Общие сведения о кубах OLAP в Service Manager для
+  расширенной аналитики.
+\newblock Режим доступа:
+  \url{https://docs.microsoft.com/ru-ru/system-center/scsm/olap-cubes-overview?view=sc-sm-2019}
+  (дата обращения: 07.06.2021).
+
+\bibitem{postgresql}
+\selectlanguageifdefined{russian}
+PostgreSQL: Документация. [Электронный ресурс].
+\newblock Режим доступа:
+  \url{https://postgrespro.ru/docs/postgresql/} (дата обращения:
+  07.06.2021).
+
+\bibitem{mysql}
+\selectlanguageifdefined{russian}
+MySQL Database Service is a fully managed database service to deploy
+  cloud-native applications. [Электронный ресурс].
+\newblock Режим доступа: \url{https://www.mysql.com/} (дата
+  обращения: 07.06.2021).
+
+\bibitem{oracle}
+\selectlanguageifdefined{russian}
+SQL Language | Oracle[Электронный ресурс].
+\newblock Режим доступа:
+  \url{https://www.oracle.com/database/technologies/appdev/sql.html} (дата
+  обращения: 07.06.2021).
+
+\bibitem{python}
+\selectlanguageifdefined{russian}
+The official home of the Python Programming Language. [Электронный
+  ресурс].
+\newblock Режим доступа: \url{https://www.python.org/} (дата
+  обращения: 07.06.2021).
+
+\bibitem{cube-operations}
+\selectlanguageifdefined{russian}
+Cube, Dimensions, Facts and Measures. [Электронный ресурс].
+\newblock Режим доступа:
+  \url{https://cubes.readthedocs.io/en/v1.0.1/introduction.html#cube-dimensions-facts-and-measures}
+  (дата обращения: 07.06.2021).
+
+\bibitem{cube-schemas}
+\selectlanguageifdefined{russian}
+Schemas and Models. [Электронный ресурс].
+\newblock Режим доступа:
+  \url{https://cubes.readthedocs.io/en/v1.0.1/schemas.html} (дата
+  обращения: 07.06.2021).
+
+\bibitem{cube-lib}
+\selectlanguageifdefined{russian}
+Cubes - OLAP Framework. [Электронный ресурс].
+\newblock Режим доступа:
+  \url{https://cubes.readthedocs.io/en/v1.0.1/index.html} (дата
+  обращения: 07.06.2021).
+
+\bibitem{requests-lib}
+\selectlanguageifdefined{russian}
+Requests. [Электронный ресурс].
+\newblock Режим доступа:
+  \url{https://docs.python-requests.org/en/latest/} (дата
+  обращения: 07.06.2021).
+
+\end{thebibliography}
