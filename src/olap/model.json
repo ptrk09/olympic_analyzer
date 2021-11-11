@@ -1,0 +1,165 @@
+{
+    "cubes": [
+        {
+            "name": "medal",
+            "dimensions": ["athletes", "games", "sport", "event"],
+            "joins": [
+                {"master":"id", "detail":"athletes.id"},
+                {"master":"athletes.id_noc", "detail":"nation.id"},
+                {"master":"id_game", "detail":"games.id"},
+                {"master":"sport", "detail":"sport.id"},
+                {"master":"event", "detail":"event.id"}
+            ],
+            "mappings": {
+                "athletes.nation_noc": "nation.noc",
+                "sport.name_sport" : "sport.name_sport"
+            },
+            "measures": [
+		        {"name": "gold_m"},
+                {"name": "silver_m"},
+                {"name": "bronze_m"}
+            ],
+            "aggregates": [
+                {
+                    "name": "count_gold_medals",
+                    "function": "sum",
+                    "measure": "gold_m"
+                },
+                {
+                    "name": "count_silver_medals",
+                    "function": "sum",
+                    "measure": "silver_m"
+                },
+                {
+                    "name": "count_bronze_medals",
+                    "function": "sum",
+                    "measure": "bronze_m"
+                }
+            ]
+        }
+    ],
+
+    "dimensions": [
+        { 
+            "name": "athletes",
+            "levels": [
+                {
+                    "name": "name",
+                    "attributes": ["name"],
+                    "label_attribute" : "name",
+                    "order_attribute": "name",
+                    "key": "name"
+                },
+                {
+                    "name": "sex",
+                    "attributes": ["sex"],
+                    "label_attribute" : "sex",
+                    "order_attribute": "sex",
+                    "key": "sex"
+                },
+                {
+                    "name": "age",
+                    "attributes": ["age"],
+                    "label_attribute" : "age",
+                    "order_attribute": "age",
+                    "key": "age"
+                },
+                {
+                    "name": "height",
+                    "attributes": ["height"],
+                    "label_attribute" : "height",
+                    "order_attribute": "height",
+                    "key": "height"
+                },
+                {
+                    "name": "weight",
+                    "attributes": ["weight"],
+                    "label_attribute" : "weight",
+                    "order_attribute": "weight",
+                    "key": "weight"
+                },
+                {
+                    "name": "nation_noc",
+                    "attributes": ["nation_noc"],
+                    "label_attribute" : "nation_noc",
+                    "order_attribute": "nation_noc",
+                    "key": "nation_noc"
+                }
+            ],
+            "hierarchies": [
+                {"name": "h_name", "levels":["name", "sex", "age", "height", "weight", "nation_noc"]},
+                {"name": "h_sex", "levels":["sex"]},
+                {"name": "h_age", "levels":["age"]},
+                {"name": "h_height", "levels":["height"]},
+                {"name": "h_weight", "levels":["weight"]},
+                {"name": "h_noc", "levels":["nation_noc"]}
+            ],
+            "default_hierarchy_name": "h_name"
+        },
+        { 
+            "name": "games",
+            "levels": [
+                {
+                    "name": "year",
+                    "attributes": ["year"],
+                    "key" : "year"
+                },
+                {
+                    "name": "season",
+                    "attributes": ["season"],
+                    "key" : "season"
+                }
+            ],
+            "hierarchies": [
+                {"name": "h_year", "levels":["year", "season"]}
+            ],
+            "default_hierarchy_name": "h_year"   
+        },
+        { 
+            "name": "sport",
+            "levels": [
+                {
+                    "name": "name_sport",
+                    "label_attribute" : "name_sport",
+                    "order_attribute": "name_sport",
+                    "attributes": ["name_sport"],
+                    "key" : "name_sport"
+                },
+                {
+                    "name": "id",
+                    "label_attribute" : "id",
+                    "order_attribute": "id",
+                    "attributes": ["id"],
+                    "key" : "id"
+                }
+            ],
+            "hierarchies": [
+                {"name": "h_sport", "levels":["name_sport", "id"]}
+            ],
+            "default_hierarchy_name": "h_sport" 
+        },
+        { 
+            "name": "event",
+            "levels": [
+                {
+                    "name": "name_event",
+                    "label_attribute" : "name_event",
+                    "order_attribute": "name_event",
+                    "attributes": ["name_event"],
+                    "key" : "name_event"
+                },
+                {
+                    "name": "id",
+                    "label_attribute" : "id",
+                    "order_attribute": "id",
+                    "attributes": ["id"],
+                    "key" : "id"
+                }
+            ],
+            "hierarchies": [
+                {"name": "h_event", "levels":["name_event", "id"]}
+            ],
+            "default_hierarchy_name": "h_event"
+        }
+    ]
+}
